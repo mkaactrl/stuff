@@ -1,6 +1,7 @@
 import random
 import string
 import requests
+import time
 
 # Define log file
 log_file = "debug_log.txt"
@@ -42,3 +43,6 @@ while True:
     username = generate_word()
     log_message(f"Checking {username}...")
     check_username(username)
+    
+    # Sleep for 1 second to avoid flooding the terminal
+    time.sleep(1)  # You can adjust this time (in seconds) to slow it down further if needed
